@@ -11,8 +11,21 @@ void main() {
   runApp(const MonumentalHabits());
 }
 
-class MonumentalHabits extends StatelessWidget {
+class MonumentalHabits extends StatefulWidget {
   const MonumentalHabits({super.key});
+
+  @override
+  State<MonumentalHabits> createState() => _MonumentalHabitsState();
+}
+
+class _MonumentalHabitsState extends State<MonumentalHabits> {
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      FlutterNativeSplash.remove();
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
