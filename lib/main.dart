@@ -30,7 +30,7 @@ class _MonumentalHabitsState extends State<MonumentalHabits> {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: const Size(360, 690),
+      designSize: const Size(414, 866),
       minTextAdapt: true,
       splitScreenMode: true,
       builder: (context, widget) {
@@ -39,8 +39,9 @@ class _MonumentalHabitsState extends State<MonumentalHabits> {
           title: 'Monumental Habits',
           theme: ThemeData.light().copyWith(
             scaffoldBackgroundColor: AppColors.scaffoldColor,
-            textTheme: GoogleFonts.manropeTextTheme(
-              ThemeData.light().textTheme,
+            textTheme: GoogleFonts.manropeTextTheme().apply(
+              bodyColor: AppColors.primaryColor,
+              displayColor: AppColors.primaryColor,
             ),
           ),
           debugShowCheckedModeBanner: false,
