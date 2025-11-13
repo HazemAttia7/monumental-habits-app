@@ -10,5 +10,9 @@ void main() async {
   await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
   await dotenv.load();
+
+  // For testing purposes
+  // Prefs.setSeenOnboarding(value: false);
+
   runApp(const MonumentalHabits());
 }
