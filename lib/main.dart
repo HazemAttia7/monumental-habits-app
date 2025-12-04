@@ -12,8 +12,8 @@ void main() async {
     dotenv.load(),
   ]);
 
-  // For testing purposes
-  Prefs.setSeenOnboarding(value: false);
+  // // For testing purposes
+  // Prefs.setSeenOnboarding(value: false);
 
   runApp(const MonumentalHabits());
 }
